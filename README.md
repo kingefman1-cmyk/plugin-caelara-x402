@@ -132,8 +132,9 @@ What is verified, and what is not:
 
 | Verified | Not verified |
 |---|---|
-| All 100 tools return valid, in-policy 402 terms from production (dry run) | A paid call made through this package. The paid path uses the same `x402-fetch` flow as the Caelara quickstart, whose $0.005 settlement is on Base: [basescan](https://basescan.org/tx/0xca1637a21ba8203c4044005a360c1b107cd75cd2625ee758ea7fe7c962b6982e) |
-| The cap, network, asset and `payTo` checks refuse before anything is signed | Running inside a live ElizaOS, AgentKit or GAME runtime. The adapter shapes were checked against each project's source, not executed in it |
+| All 100 tools return valid, in-policy 402 terms from production (dry run) | Running inside a live ElizaOS, AgentKit or GAME runtime. The adapter shapes were checked against each project's source, not executed in it |
+| Paid calls through this package (`createCaelaraClient`, `maxUsdc` 0.005): one $0.005 call on each of four suites, settled on Base to the Caelara treasury, HTTP 200 and confirmed on-chain: [crypto](https://basescan.org/tx/0x07958b4315ca9da06db932cff61767815153c40fbb6d90baa440e2c8ca5c3deb), [agent](https://basescan.org/tx/0xd2c6c0e8de17f1c401ffa25144357c8a01c941e2100b47741dfe6b066c79c243), [ecom](https://basescan.org/tx/0x274044fbd0beb7702139bd3c53925888f4eb3009e48064c940d8d5eadc9a8f3d), [seo](https://basescan.org/tx/0x6d66c1a3cb67aa05958febdb993673ef823a0b2743c528eab54f47ee289b29d6) | |
+| The cap, network, asset and `payTo` checks refuse before anything is signed | |
 | Argument validation, ElizaOS action results, AgentKit schema building, GAME coercion (with fakes) | |
 
 ## Security
