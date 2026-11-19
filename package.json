@@ -1,0 +1,58 @@
+{
+  "name": "plugin-caelara-x402",
+  "version": "0.1.0",
+  "description": "Caelara Labs edge APIs as agent tools: 100 endpoints in 10 suites, paid per call in USDC on Base via x402, with a hard per-call spending cap. Adapters for ElizaOS, Coinbase AgentKit and Virtuals GAME.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "generate": "node scripts/generate.mjs",
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test test/",
+    "test:live": "npm run build && LIVE=1 node --test test/live.test.mjs"
+  },
+  "keywords": [
+    "x402",
+    "usdc",
+    "base",
+    "agents",
+    "elizaos",
+    "agentkit",
+    "virtuals",
+    "mcp",
+    "a2a",
+    "caelara"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kingefman1-cmyk/plugin-caelara-x402.git"
+  },
+  "homepage": "https://caelaralabs.com",
+  "bugs": {
+    "url": "https://github.com/kingefman1-cmyk/plugin-caelara-x402/issues",
+    "email": "ops@caelaralabs.com"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "viem": "^2.58.1",
+    "x402-fetch": "1.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0"
+  }
+}
